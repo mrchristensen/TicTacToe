@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.tictactoe.Model.Position;
+
 public class MainActivity extends AppCompatActivity {
     private static final String LOG_TAG = "MainActivity";
 
@@ -47,8 +49,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(LOG_TAG, "Clicked: 0,0");
-                if(click(0,0) == 0){
-                    Drawable playerIcon = getPlayerIcon();
+                Drawable playerIcon = getPlayerIcon();
+
+                if(click(new Position(0,0)) != -1){
                     topLeftSquare.setImageDrawable(playerIcon);
                 }
             }
@@ -57,8 +60,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(LOG_TAG, "Clicked: 1,0");
-                if(click(1,0) == 0){
-                    Drawable playerIcon = getPlayerIcon();
+                Drawable playerIcon = getPlayerIcon();
+
+                if(click(new Position(1,0)) != -1){
                     topCenterSquare.setImageDrawable(playerIcon);
                 }
             }
@@ -67,8 +71,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(LOG_TAG, "Clicked: 2,0");
-                if(click(2,0) == 0){
-                    Drawable playerIcon = getPlayerIcon();
+                Drawable playerIcon = getPlayerIcon();
+
+                if(click(new Position(2,0)) != -1){
                     topRightSquare.setImageDrawable(playerIcon);
                 }
             }
@@ -78,8 +83,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(LOG_TAG, "Clicked: 0,1");
-                if(click(0,1) == 0){
-                    Drawable playerIcon = getPlayerIcon();
+                Drawable playerIcon = getPlayerIcon();
+
+                if(click(new Position(0,1)) != -1){
                     middleLeftSquare.setImageDrawable(playerIcon);
                 }
             }
@@ -88,8 +94,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(LOG_TAG, "Clicked: 1,1");
-                if(click(1,1) == 0){
-                    Drawable playerIcon = getPlayerIcon();
+                Drawable playerIcon = getPlayerIcon();
+
+                if(click(new Position(1,1)) != -1){
                     middleCenterSquare.setImageDrawable(playerIcon);
                 }
             }
@@ -98,8 +105,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(LOG_TAG, "Clicked: 2,1");
-                if(click(2,1) == 0){
-                    Drawable playerIcon = getPlayerIcon();
+                Drawable playerIcon = getPlayerIcon();
+
+                if(click(new Position(2,1)) != -1){
                     middleRightSquare.setImageDrawable(playerIcon);
                 }
             }
@@ -110,8 +118,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(LOG_TAG, "Clicked: 0,2");
-                if(click(0,2) == 0){
-                    Drawable playerIcon = getPlayerIcon();
+                Drawable playerIcon = getPlayerIcon();
+
+                if(click(new Position(0,2)) != -1){
                     bottomLeftSquare.setImageDrawable(playerIcon);
                 }
             }
@@ -120,8 +129,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(LOG_TAG, "Clicked: 1,2");
-                if(click(1,2) == 0){
-                    Drawable playerIcon = getPlayerIcon();
+                Drawable playerIcon = getPlayerIcon();
+
+                if(click(new Position(1,2)) != -1){
                     bottomCenterSquare.setImageDrawable(playerIcon);
                 }
             }
@@ -130,8 +140,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(LOG_TAG, "Clicked: 2,2");
-                if(click(2,2) == 0){
-                    Drawable playerIcon = getPlayerIcon();
+                Drawable playerIcon = getPlayerIcon();
+
+                if(click(new Position(2,2)) != -1){
                     bottomRightSquare.setImageDrawable(playerIcon);
                 }
             }
@@ -148,20 +159,29 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private int click(int x, int y) {
-        int result = game.makeMove(x, y);
+    private int click(Position pos) {
+        int result = game.makeMove(pos);
 
-        if(result == 0){
+        if(result == 0){  //Todo: Make this not a magic number
             Log.i(LOG_TAG, "Successful Move - Next Turn");
-            Toast.makeText(this, "Valid Move", Toast.LENGTH_SHORT).show();
             //TODO: next turn
         }
-        else if(result == 1){
-            Log.i(LOG_TAG, "Successful Move - Game was won");
-            Toast.makeText(this, "Game Over!", Toast.LENGTH_LONG).show();
+        else if(result == 1){ //Todo: Make this not a magic number
+            Log.i(LOG_TAG, "Game was won - knots win");
+            Toast.makeText(this, "Game Over - knots win!", Toast.LENGTH_LONG).show();
             //TODO: game was won
         }
-        else if(result == -1){
+        else if(result == 2){ //Todo: Make this not a magic number
+            Log.i(LOG_TAG, "Game was won - crosses win");
+            Toast.makeText(this, "Game Over - crosses win!", Toast.LENGTH_LONG).show();
+            //TODO: game was won
+        }
+        else if(result == 3){ //Todo: Make this not a magic number
+            Log.i(LOG_TAG, "Game was tied - cats game");
+            Toast.makeText(this, "Game Over - cats game", Toast.LENGTH_LONG).show();
+            //TODO: game was won
+        }
+        else if(result == -1){  //Todo: Make this not a magic number
             Log.i(LOG_TAG, "Unsuccessful Move - Try again");
             Toast.makeText(this, "Invalid move - Try again", Toast.LENGTH_SHORT).show();
             //TODO: Try a different spot
