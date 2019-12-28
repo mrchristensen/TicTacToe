@@ -19,8 +19,7 @@
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:src="@drawable/ic_launcher_background" />
+            android:paddingBottom="10dp" />
 
         <View
             android:layout_width="2dp"
@@ -35,8 +34,7 @@
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:src="@drawable/ic_launcher_background" />
+            android:paddingBottom="10dp" />
 
         <View
             android:layout_width="2dp"
@@ -51,8 +49,7 @@
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:src="@drawable/ic_launcher_background" />
+            android:paddingBottom="10dp" />
 
     </LinearLayout>
 
@@ -75,8 +72,7 @@
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:src="@drawable/ic_launcher_background" />
+            android:paddingBottom="10dp" />
 
         <View
             android:layout_width="2dp"
@@ -91,8 +87,7 @@
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:src="@drawable/ic_launcher_background" />
+            android:paddingBottom="10dp" />
 
         <View
             android:layout_width="2dp"
@@ -107,8 +102,7 @@
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:src="@drawable/ic_launcher_background" />
+            android:paddingBottom="10dp" />
 
     </LinearLayout>
 
@@ -131,8 +125,7 @@
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:src="@drawable/ic_launcher_background" />
+            android:paddingBottom="10dp" />
 
         <View
             android:layout_width="2dp"
@@ -147,8 +140,7 @@
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:src="@drawable/ic_launcher_background" />
+            android:paddingBottom="10dp" />
 
         <View
             android:layout_width="2dp"
@@ -163,8 +155,7 @@
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:src="@drawable/ic_launcher_background" />
+            android:paddingBottom="10dp" />
 
     </LinearLayout>
 
