@@ -1,5 +1,6 @@
 package com.example.tictactoe.ui.UI.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.tictactoe.R;
+import com.example.tictactoe.ui.UI.Activity.StandardGameHolderActivity;
 
 public class MainMenuFragment extends Fragment {
     private static final String LOG_TAG = "MainMenuFragment";
@@ -41,21 +43,23 @@ public class MainMenuFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Log.i(LOG_TAG, "Clicked regularGameButton");
-                //((MainActivity) getActivity()).loadSupportFragment(new MyMapFragment());
+                //((MainActivity) getActivity()).loadSupportFragment(new MyMapFragment()); //TODO: Set the other settings through fragments (local coop vs computer, what difficulty level, etc)
+                Intent personActivityIntent = new Intent(getContext(), StandardGameHolderActivity.class);
+                startActivity(personActivityIntent);
             }
         });
         ultimateGameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.i(LOG_TAG, "Clicked ultimateGameButton");
-                //((MainActivity) getActivity()).loadSupportFragment(new MyMapFragment());
+                //((MainActivity) getActivity()).loadSupportFragment(new MyMapFragment()); //TODO: Set the other settings through fragments (local coop vs computer, what difficulty level, etc)
             }
         });
         exitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.i(LOG_TAG, "Clicked exitButton");
-                //TODO: Exit the application
+                //TODO: Exit the application (give a prompt through a dialog)
             }
         });
 

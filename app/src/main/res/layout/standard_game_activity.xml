@@ -1,165 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.UI.Activity.StandardGameHolderActivity">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-android:orientation="vertical"
-android:gravity="center">
+    <LinearLayout
+        android:id="@+id/playersTurnPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player's turn: " />
 
+        <TextView
+            android:id="@+id/currentPlayersTurn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X/O" />
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/topLeftSquare"
-        android:layout_width="65dp"
-        android:layout_height="72dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp" />
+    <FrameLayout
+        android:id="@+id/fragmentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:layout_width="2dp"
-        android:layout_height="match_parent"
-        android:background="#c0c0c0"
-        />
-
-    <ImageView
-        android:id="@+id/topCenterSquare"
-        android:layout_width="65dp"
-        android:layout_height="72dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp" />
-
-    <View
-        android:layout_width="2dp"
-        android:layout_height="match_parent"
-        android:background="#c0c0c0"
-        />
-
-    <ImageView
-        android:id="@+id/topRightSquare"
-        android:layout_width="65dp"
-        android:layout_height="72dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp" />
-
-</LinearLayout>
-
-<View
-    android:layout_width="190dp"
-    android:layout_height="2dp"
-    android:background="#c0c0c0"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp" />
-
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-    <ImageView
-        android:id="@+id/middleLeftSquare"
-        android:layout_width="65dp"
-        android:layout_height="72dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp" />
-
-    <View
-        android:layout_width="2dp"
-        android:layout_height="match_parent"
-        android:background="#c0c0c0"
-        />
-
-    <ImageView
-        android:id="@+id/middleCenterSquare"
-        android:layout_width="65dp"
-        android:layout_height="72dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp" />
-
-    <View
-        android:layout_width="2dp"
-        android:layout_height="match_parent"
-        android:background="#c0c0c0"
-        />
-
-    <ImageView
-        android:id="@+id/middleRightSquare"
-        android:layout_width="65dp"
-        android:layout_height="72dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp" />
-
-</LinearLayout>
-
-<View
-    android:layout_width="190dp"
-    android:layout_height="2dp"
-    android:background="#c0c0c0"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp" />
-
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-    <ImageView
-        android:id="@+id/bottomLeftSquare"
-        android:layout_width="65dp"
-        android:layout_height="72dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp" />
-
-    <View
-        android:layout_width="2dp"
-        android:layout_height="match_parent"
-        android:background="#c0c0c0"
-        />
-
-    <ImageView
-        android:id="@+id/bottomCenterSquare"
-        android:layout_width="65dp"
-        android:layout_height="72dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp" />
-
-    <View
-        android:layout_width="2dp"
-        android:layout_height="match_parent"
-        android:background="#c0c0c0"
-        />
-
-    <ImageView
-        android:id="@+id/bottomRightSquare"
-        android:layout_width="65dp"
-        android:layout_height="72dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp" />
-
-</LinearLayout>
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
