@@ -28,11 +28,11 @@ public class TicTacToeGame {
         movesMade = 0;
 
         //Set the board to blank //TODO: Check to see if this is necessary
-        for (int[] ints : board) {
-            for (int i : ints) {
-                i = blank;
-            }
-        }
+//        for (int[] ints : board) {
+//            for (int i : ints) {
+//                i = blank;
+//            }
+//        }
     }
 
     public int makeMove(Position pos){

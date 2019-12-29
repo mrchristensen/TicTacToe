@@ -1,4 +1,4 @@
-package com.example.tictactoe;
+package com.example.tictactoe.ui.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,13 +6,15 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import com.example.tictactoe.Model.Position;
+import com.example.tictactoe.R;
+import com.example.tictactoe.TicTacToeGame;
 
-public class MainActivity extends AppCompatActivity {
-    private static final String LOG_TAG = "MainActivity";
+public class StandardGameActivity extends AppCompatActivity {
+    private static final String LOG_TAG = "StandardGameActivity";
 
     private ImageView topLeftSquare;
     private ImageView topCenterSquare;
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.standard_game_activity);
 
         game = new TicTacToeGame();
 
